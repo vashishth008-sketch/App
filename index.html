@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VedIQ | AI-Powered Traditional Guidance</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/main.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container topbar__content">
+        <div class="logo">VedIQ</div>
+        <nav class="nav">
+          <a href="#astrology">Astrology</a>
+          <a href="#palm-reading">Palm Reading</a>
+          <a href="#pooja">Pooja</a>
+          <a href="#assistant">AI Assistant</a>
+          <a href="#pricing">Pricing</a>
+        </nav>
+        <a class="cta" href="#download">Get Early Access</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero__content">
+          <div class="hero__text">
+            <p class="eyebrow">AI for timeless traditions</p>
+            <h1>Personalized Vedic guidance, accessible anywhere.</h1>
+            <p class="subtitle">
+              VedIQ blends trusted astrologers, palmists, and pooja specialists with
+              cutting-edge AI to offer authentic insights and effortless coordination.
+            </p>
+            <div class="hero__actions">
+              <a class="btn btn--primary" href="#demo">Experience the demo</a>
+              <a class="btn btn--ghost" href="#how-it-works">How it works</a>
+            </div>
+            <div class="hero__stats">
+              <div>
+                <span class="stat__number">50k+</span>
+                <span class="stat__label">Consultations orchestrated</span>
+              </div>
+              <div>
+                <span class="stat__number">1.2M</span>
+                <span class="stat__label">AI interactions handled</span>
+              </div>
+              <div>
+                <span class="stat__number">4.9/5</span>
+                <span class="stat__label">Average practitioner rating</span>
+              </div>
+            </div>
+          </div>
+          <div class="hero__card" id="demo">
+            <div class="card__header">
+              <span class="pill">Live demo</span>
+              <h2>Instant birth-chart insights</h2>
+            </div>
+            <form class="card__form" id="astrology-demo-form">
+              <label>
+                Full name
+                <input type="text" name="name" placeholder="Aarav Sharma" required />
+              </label>
+              <div class="field-grid">
+                <label>
+                  Date of birth
+                  <input type="date" name="dob" required />
+                </label>
+                <label>
+                  Time of birth
+                  <input type="time" name="tob" required />
+                </label>
+              </div>
+              <label>
+                Place of birth
+                <input type="text" name="pob" placeholder="Jaipur, Rajasthan" required />
+              </label>
+              <button class="btn btn--primary" type="submit">Generate reading</button>
+            </form>
+            <div class="card__output" id="astrology-demo-output" aria-live="polite"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="how-it-works" id="how-it-works">
+        <div class="container">
+          <h2>Bridging sacred knowledge with responsible AI</h2>
+          <div class="step-grid">
+            <article class="step">
+              <h3>Contextual intake</h3>
+              <p>
+                Structured forms capture birth details, palm imagery, and pooja preferences while
+                honoring cultural nuance and privacy expectations.
+              </p>
+            </article>
+            <article class="step">
+              <h3>AI orchestration</h3>
+              <p>
+                Language and vision models interpret signals and collaborate with vetted practitioners
+                for validated recommendations.
+              </p>
+            </article>
+            <article class="step">
+              <h3>Human assurance</h3>
+              <p>
+                Every insight is reviewed by domain experts and stored securely with granular
+                consent controls.
+              </p>
+            </article>
+            <article class="step">
+              <h3>Seamless execution</h3>
+              <p>
+                Coordinate poojas, manage schedules, and facilitate donations or dakshina through our
+                integrated payment stack.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="experience" id="astrology">
+        <div class="container experience__layout">
+          <div class="experience__text">
+            <h2>Astrology copilots for modern seekers</h2>
+            <p>
+              Upload kundali data, receive planetary positions, and ask clarifying follow-up
+              questions with natural language. VedIQ delivers digestible guidance with actionable
+              timelines.
+            </p>
+            <ul class="experience__list">
+              <li>Automatic birth-chart calculations powered by NASA ephemeris data.</li>
+              <li>AI-generated interpretations verified by master astrologers.</li>
+              <li>Personal ritual recommendations synced with your calendar.</li>
+            </ul>
+          </div>
+          <div class="experience__card">
+            <h3>Sample reading</h3>
+            <div class="experience__output" id="astrology-sample"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="experience experience--reverse" id="palm-reading">
+        <div class="container experience__layout">
+          <div class="experience__text">
+            <h2>Palm insights from your smartphone</h2>
+            <p>
+              Our vision pipeline identifies major and minor palm lines, mounts, and texture patterns
+              to provide tailored life-path insights and wellness suggestions.
+            </p>
+            <ul class="experience__list">
+              <li>Guided capture workflow ensures well-lit, high-resolution uploads.</li>
+              <li>Explainable AI overlays highlight detected features for transparency.</li>
+              <li>Follow-up prompts to validate readings with certified palmists.</li>
+            </ul>
+          </div>
+          <div class="experience__card">
+            <h3>Try palm reading</h3>
+            <form id="palm-reading-form" class="card__form">
+              <label>
+                Upload palm image
+                <input type="file" accept="image/*" name="palmImage" />
+              </label>
+              <label>
+                Focus area
+                <select name="focus">
+                  <option value="career">Career guidance</option>
+                  <option value="relationships">Relationships</option>
+                  <option value="health">Health & vitality</option>
+                  <option value="destiny">Life purpose</option>
+                </select>
+              </label>
+              <button class="btn btn--primary" type="submit">Analyze</button>
+            </form>
+            <div class="card__output" id="palm-reading-output" aria-live="polite"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="experience" id="pooja">
+        <div class="container experience__layout">
+          <div class="experience__text">
+            <h2>Pooja coordination made effortless</h2>
+            <p>
+              Discover local priests, curate puja kits, and harmonize schedules with family and
+              community members in a few taps.
+            </p>
+            <ul class="experience__list">
+              <li>Verified practitioner marketplace with ratings and language filters.</li>
+              <li>Smart recommendations for auspicious muhurat windows.</li>
+              <li>Integrated logistics support for samagri delivery and live-stream hosting.</li>
+            </ul>
+          </div>
+          <div class="experience__card">
+            <h3>Plan a pooja</h3>
+            <form id="pooja-form" class="card__form">
+              <label>
+                Ceremony type
+                <select name="ceremony">
+                  <option value="griha-pravesh">Griha Pravesh</option>
+                  <option value="satyanarayan">Satyanarayan Katha</option>
+                  <option value="rudrabhishek">Rudrabhishek</option>
+                  <option value="naming-ceremony">Naamkaran</option>
+                </select>
+              </label>
+              <div class="field-grid">
+                <label>
+                  Preferred date
+                  <input type="date" name="date" />
+                </label>
+                <label>
+                  Preferred time
+                  <input type="time" name="time" />
+                </label>
+              </div>
+              <label>
+                City or virtual
+                <input type="text" name="city" placeholder="Bengaluru or Zoom" />
+              </label>
+              <button class="btn btn--primary" type="submit">Find priests</button>
+            </form>
+            <div class="card__output" id="pooja-output" aria-live="polite"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="assistant" id="assistant">
+        <div class="container assistant__layout">
+          <div class="assistant__text">
+            <h2>Ask VedIQ anything</h2>
+            <p>
+              Engage in conversational guidance powered by multilingual, fine-tuned large language
+              models.
+            </p>
+            <ul class="experience__list">
+              <li>Clarify astrology insights with contextual answers.</li>
+              <li>Receive preparation checklists before your pooja.</li>
+              <li>Get reminders, follow-ups, and spiritual wellness nudges.</li>
+            </ul>
+          </div>
+          <div class="assistant__console">
+            <div class="console__messages" id="assistant-messages"></div>
+            <form id="assistant-form" class="assistant__form">
+              <input
+                type="text"
+                name="message"
+                placeholder="Ask about your next auspicious muhurat..."
+                required
+              />
+              <button class="btn btn--primary" type="submit">Send</button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <section class="metrics" id="metrics">
+        <div class="container">
+          <h2>Enterprise-grade foundations</h2>
+          <div class="metrics__grid">
+            <article>
+              <h3>99.95% uptime</h3>
+              <p>Geo-redundant infrastructure with autoscaling inference clusters.</p>
+            </article>
+            <article>
+              <h3>ISO 27001 aligned</h3>
+              <p>Security controls mapped to international standards and Indian regulations.</p>
+            </article>
+            <article>
+              <h3>Privacy first</h3>
+              <p>Granular consent ledger, encryption at rest, and automated data retention.</p>
+            </article>
+            <article>
+              <h3>Human in the loop</h3>
+              <p>Expert review boards and bias monitoring dashboards for every AI release.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="testimonials" id="testimonials">
+        <div class="container testimonial__layout">
+          <div class="testimonial__quote">
+            <blockquote>
+              “VedIQ helped my family plan a Satyanarayan pooja end-to-end. The AI reminders were so
+              thoughtful and the priest coordination was seamless.”
+            </blockquote>
+            <cite>Priya Desai — Pune, India</cite>
+          </div>
+          <div class="testimonial__cards">
+            <article>
+              <h3>Practitioner spotlight</h3>
+              <p>
+                “With VedIQ, I can review AI-generated readings, add my personal notes, and share
+                them instantly with seekers worldwide.”
+              </p>
+              <span>Guru Mahesh, Vedic Astrologer</span>
+            </article>
+            <article>
+              <h3>Enterprise partner</h3>
+              <p>
+                “Our wellness program integrates VedIQ to provide personalized rituals during
+                employee life moments.”
+              </p>
+              <span>Nandini Rao, HR Director</span>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="pricing" id="pricing">
+        <div class="container">
+          <h2>Choose the plan that aligns with your journey</h2>
+          <div class="pricing__grid">
+            <article class="pricing__card">
+              <h3>Seeker</h3>
+              <p class="price">₹499<span>/month</span></p>
+              <ul>
+                <li>2 astrology consultations</li>
+                <li>Palm reading insights</li>
+                <li>Monthly pooja recommendations</li>
+                <li>AI chat assistant</li>
+              </ul>
+              <button class="btn btn--ghost" type="button">Start trial</button>
+            </article>
+            <article class="pricing__card pricing__card--featured">
+              <h3>Family</h3>
+              <p class="price">₹999<span>/month</span></p>
+              <ul>
+                <li>5 combined consultations</li>
+                <li>Pooja coordination concierge</li>
+                <li>Priority practitioner support</li>
+                <li>Shared family calendar</li>
+              </ul>
+              <button class="btn btn--primary" type="button">Get Family plan</button>
+            </article>
+            <article class="pricing__card">
+              <h3>Enterprise</h3>
+              <p class="price">Custom</p>
+              <ul>
+                <li>Dedicated success manager</li>
+                <li>API and SSO access</li>
+                <li>On-site event coordination</li>
+                <li>Compliance toolkit</li>
+              </ul>
+              <button class="btn btn--ghost" type="button">Talk to sales</button>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="download" id="download">
+        <div class="container download__layout">
+          <div>
+            <h2>Be part of the first cohort</h2>
+            <p>
+              Join the VedIQ insider list to test new AI rituals, workshops, and hybrid ceremonies
+              before anyone else.
+            </p>
+          </div>
+          <form id="waitlist-form" class="waitlist__form">
+            <input type="email" name="email" placeholder="your@email.com" required />
+            <button class="btn btn--primary" type="submit">Join waitlist</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__layout">
+        <div>
+          <div class="logo">VedIQ</div>
+          <p>AI-guided wisdom rooted in tradition.</p>
+        </div>
+        <div class="footer__links">
+          <a href="#privacy">Privacy</a>
+          <a href="#security">Security</a>
+          <a href="mailto:hello@vediq.ai">Contact</a>
+        </div>
+        <div class="footer__badge">
+          <span class="pill">Beta</span>
+          <span>Invite only access</span>
+        </div>
+      </div>
+      <p class="footer__legal">© <span id="year"></span> VedIQ Technologies Pvt. Ltd. All rights reserved.</p>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+  </body>
+</html>
